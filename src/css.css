@@ -23,3 +23,74 @@ ul {
     border: 1px solid blue;
     border-radius: 5px;
 }
+
+.weather-time img {
+    margin-right: 10px;
+    line-height: 64px;
+    width: 64px;
+}
+
+.weather-time strong {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+
+}
+
+.weather-time .units {
+    position: relative;
+    top: -34px;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.fontview {
+    margin-bottom: 20px;
+}
+.temprature {
+    color: rgb(33, 33, 33);
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.cities {
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    ;
+    font-weight: 400;
+    line-height: 1;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #cee
+}
+
+.btn {
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+.btn-success {
+    color: #ffff;
+    background-color: green;
+    border-color: green;
+}
