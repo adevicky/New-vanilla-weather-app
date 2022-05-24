@@ -40,6 +40,27 @@ let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${ap
 axios.get(apiUrl).then(displayCurrentWeather); 
 }
 
+function handleSubmit(event)  {
+    event.preventDefault();
+    let city=document.querySelector("#city-input").value
+   search(city); 
+}
+
+let searchForm= document.querySelector("#search-form");
+
+function searchLocation(position){
+  let apiKey= "654e7c2b1cb01736424b3824e69350d2";
+let apiUrl= `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
+axios.get(apiUrl).then(displayCurrentWeather); 
+}
+
+function locationButton(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentLocation= document.querySelector("#current-icon");
+currentLocation.addEventListener("click", locationButton);
 
 
 let city= "Okitipupa";
