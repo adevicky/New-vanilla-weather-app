@@ -34,7 +34,11 @@ iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.dat
 iconElement.setAttribute("alt",response.data.weather[0].main);
 }
 
-
+function search(city) {
+   let apiKey= "654e7c2b1cb01736424b3824e69350d2";
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayCurrentWeather); 
+}
 
 
 
