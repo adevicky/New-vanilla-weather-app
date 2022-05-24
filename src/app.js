@@ -15,3 +15,21 @@ return `${day}, ${hours}:${minutes}`;
 let now= new Date();
 let realTme= document.querySelector("#current-time");
 realTme.innerHTML=timeNow(now)
+
+function displayCurrentWeather(response) {
+let newLocation= document.querySelector("#new-location");
+let temprature=document.querySelector("#temprature");
+let description=document.querySelector("#description");
+let humidity= document.querySelector("#humidity");
+let wind= document.querySelector("#wind");
+let iconElement= document.querySelector("#icon");
+
+
+newLocation.innerHTML=response.data.name;
+temprature .innerHTML= Math.round(response.data.main.temp);
+description.innerHTML = response.data.weather[0].main;
+humidity.innerHTML = response.data.main.humidity;
+wind.innerHTML = response.data.wind.speed;
+iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+iconElement.setAttribute("alt",response.data.weather[0].main);
+}
