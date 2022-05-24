@@ -33,3 +33,12 @@ wind.innerHTML = response.data.wind.speed;
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt",response.data.weather[0].main);
 }
+
+
+
+
+
+let city= "Okitipupa";
+let apiKey= "654e7c2b1cb01736424b3824e69350d2";
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayCurrentWeather); 
