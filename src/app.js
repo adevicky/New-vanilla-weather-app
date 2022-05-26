@@ -67,3 +67,34 @@ let city="Paris";
 let apiKey= "654e7c2b1cb01736424b3824e69350d2";
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayCurrentWeather); 
+
+function convertToFarhenheit(event){
+  event.preventDefault();
+  let tempratureElement= document.querySelector("#temprature"); 
+  celsiusLink.classList.remove("active");
+  farhenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+    tempratureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+farhenheitLink.classList.remove("active");
+  let tempratureElement = document.querySelector("#temprature");
+  tempratureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let farhenheitLink= document.querySelector("#farhenheit-link");
+farhenheitLink.addEventListener("click",convertToFarhenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+
+
+
+
+search("Okitipupa");
