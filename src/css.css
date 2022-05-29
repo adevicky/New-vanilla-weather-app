@@ -20,8 +20,11 @@ ul {
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
-    border: 1px solid blue;
+    border: 1px solid #495057;
     border-radius: 5px;
+    background-image: linear-gradient(rgba(205, 205, 205, 0.75), rgba(205, 208, 208, 0.75));
+    
+        
 }
 
 .weather-time img {
@@ -52,6 +55,17 @@ ul {
     font-size: 64px;
     font-weight: 400;
     line-height: 1;
+}
+.weather-forecast-temprature {
+    font-size: 12px;
+}
+
+.weather-forecast {
+    margin-top: 20PX;
+}
+
+.weather-forecast-temprature-min {
+    opacity: 0.5;
 }
 
 .cities {
