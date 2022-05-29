@@ -69,6 +69,29 @@ let description=document.querySelector("#description");
 let humidity= document.querySelector("#humidity");
 let wind= document.querySelector("#wind");
 let iconElement= document.querySelector("#icon");
+let bodyElement= document.querySelector("bTemp");
+let bTemp = {
+'bTemp_1' : 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/035/691/original/10.jpg?1653852586',
+'bTemp_2' : 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/035/690/original/sunny.jpg?1653852236',
+'bTemp_3' : 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/035/716/original/danny-jongerius-wJjAbEt_ZAw-unsplash.jpg?1653861259',
+'bTemp_4' : 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/035/693/original/cloudy-sky.jpg?1653853034',
+'bTemp_5' : 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/035/694/original/cloud.jpg?1653855724'
+};
+let tempBg = response.data.main.temp;
+let bTempImg = "";
+
+if(tempBg > 100){
+    bTempImg = "bTemp_1";
+}else if(tempBg <= 25) {
+  bTempImg="bTemp_4";
+}else if(tempBg<= 30){
+  bTempImg= "bTemp_5";
+}else if(tempBg<= 40){
+  bTempImg= "bTemp_2";
+}else {
+  bTempImg= "bTemp_3"
+}
+
 
 
 newLocation.innerHTML=response.data.name;
@@ -78,6 +101,7 @@ humidity.innerHTML = response.data.main.humidity;
 wind.innerHTML = response.data.wind.speed;
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt",response.data.weather[0].main);
+bodyElement.style.backgroundImage = "url('"+ bTemp[bTempImg] +"')";
 getForecast(response.data.coord);
 }
 
