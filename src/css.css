@@ -64,8 +64,11 @@ a {
     text-decoration: none;
 }
 
-.weather-forecast-temprature {
+.weather-forecast-tempratures {
     font-size: 10px;
+    box-sizing: border-box;
+        color: rgb(33, 37, 41)
+    
 }
 
 .weather-forecast {
