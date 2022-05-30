@@ -136,6 +136,7 @@ footer {
 }
 
 .btn-primary {
+    margin-left: 20px;
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
@@ -146,6 +147,7 @@ footer {
 }
 
 .btn-success {
+    margin-left: 30px;
     color: #ffff;
     background-color: #5A6505;
     border-color: #5A6505;
