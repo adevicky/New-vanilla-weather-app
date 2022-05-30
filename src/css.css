@@ -22,6 +22,13 @@ ul {
 a {
     text-decoration: none;
 }
+footer {
+    text-align: center;
+    margin-top: 40px;
+    line-height: 48px;
+    font-weight: 100;
+    font-family:  monospace;
+}
 
 
 
@@ -64,13 +71,15 @@ a {
     text-decoration: none;
 }
 
-
+.weather-forecast {
+    margin-top: 20PX;
+}
 .weather-forecast-temperatures{
     font-size: 14px;
 }
 
-.weather-forecast {
-    margin-top: 20PX;
+.weather-forecast-date {
+
 }
 
 .weather-forecast-temperature-min { 
@@ -131,4 +140,11 @@ a {
     color: #ffff;
     background-color: #5A6505;
     border-color: #5A6505;
+}
+.Weather footer {
+    font-size: 14px;
+    margin-top: 40px;
+    line-height: 18px;
+    text-align: center;
+    color: rgba(39, 33, 66, .4);
 }
